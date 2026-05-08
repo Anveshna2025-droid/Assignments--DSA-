@@ -13,7 +13,7 @@ import sys
 # Increase recursion limit for deep Merge/Quick sort calls on large datasets
 sys.setrecursionlimit(20000)
 
-# 1. INSERTION SORT (Exp 15: Advantage on Nearly Sorted)
+# 1. INSERTION SORT 
 def insertion_sort(arr):
     # O(n^2) worst case, but O(n) for nearly sorted data [cite: 49, 293]
     for i in range(1, len(arr)):
@@ -25,7 +25,7 @@ def insertion_sort(arr):
         arr[j + 1] = key
     return arr
 
-# 2. MERGE SORT (Exp 16: Stable, O(n log n))
+# 2. MERGE SORT 
 def merge_sort(arr):
     # Divide and Conquer approach [cite: 51, 298]
     if len(arr) <= 1:
@@ -51,7 +51,7 @@ def merge(left, right):
     result.extend(right[j:])
     return result
 
-# 3. QUICK SORT (Exp 17: Partition + Worst Case Awareness)
+# 3. QUICK SORT 
 def quick_sort(arr):
     # Performance depends heavily on pivot choice [cite: 53, 302]
     if len(arr) <= 1:
@@ -65,7 +65,7 @@ def quick_sort(arr):
     
     return quick_sort(left) + middle + quick_sort(right)
 
-# 4. BENCHMARK HARNESS (Exp 19: Datasets + Timing Table)
+# 4. BENCHMARK HARNESS 
 def run_benchmark():
     # Requirements: Sizes 1000, 5000, 10000 [cite: 57, 313]
     sizes = [1000, 5000, 10000]
